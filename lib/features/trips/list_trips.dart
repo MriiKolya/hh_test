@@ -10,9 +10,10 @@ class ListTrips extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<TripsCubit>(
-      create: (context) => DependencyProvider.get<TripsCubit>(),
+      create: (context) => DependencyProvider.get<TripsCubit>()..loadListTrip(),
       child: BlocBuilder<TripsCubit, TripsState>(
         builder: (context, state) {
+          debugPrint(state.toString());
           if (state.loading) {
             return const Center(child: CircularProgressIndicator());
           }

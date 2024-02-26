@@ -26,14 +26,13 @@ class TripsRepository implements ITripsRepository {
     try {
       final dtos = <TripDTO>[];
       final url =
-          '${ApiTrips.baseUrl}?departure_city=${searchConfig.departureCity}&destination_city=${searchConfig.destinationCity}&date=${searchConfig.data}';
+          '${ApiTrips.baseUrl}?departure_city=${searchConfig.departureCity}&destination_city=${searchConfig.destinationCity}&date=2024-02-28';
       final response = await _dio.get(url);
       final responseData = response.data;
 
       if (responseData is Map<String, dynamic>) {
         try {
-          final results = responseData['genres'] as List<dynamic>;
-
+          final results = responseData['trips'] as List<dynamic>;
           for (final data in results) {
             dtos.add(TripDTO.fromJson(data as Map<String, dynamic>));
           }
