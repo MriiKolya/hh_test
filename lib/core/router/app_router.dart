@@ -25,7 +25,7 @@ class AppRoutes {
       GoRoute(
         path: AppRoutes._authorizationPath,
         name: AppRouterName.authorizationName,
-        pageBuilder: (_, state) => const CupertinoPage<void>(
+        pageBuilder: (_, state) => CupertinoPage<void>(
           child: AuthorizationScreen(),
         ),
       ),

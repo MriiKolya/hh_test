@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hh_test/core/error/failure.dart';
@@ -23,12 +22,9 @@ class TripsCubit extends Cubit<TripsState> {
   }
 
   void dataTripsChanged(DateTime tripsData) {
-    emit(
-      state.copyWith(
-        tripsData: tripsData,
-      ),
-    );
-    debugPrint(state.tripsData.toString());
+    emit(state.copyWith(
+      tripsData: tripsData,
+    ));
   }
 
   void departureCityChanged(String departureCity) {

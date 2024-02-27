@@ -16,15 +16,18 @@ class ListTrips extends StatelessWidget {
           return const Center(child: CircularProgressIndicator());
         }
         if (state.listTrip.isNotEmpty) {
-          return ListView.builder(
-            itemCount: state.listTrip.length,
-            itemBuilder: (context, index) {
-              final tripCard = state.listTrip[index].toCard();
-              return Padding(
-                padding: const EdgeInsets.all(20),
-                child: TripCard(tripCard: tripCard),
-              );
-            },
+          return RefreshIndicator(
+            onRefresh: () => context.read<TripsCubit>().searchTrip(),
+            child: ListView.builder(
+              itemCount: state.listTrip.length,
+              itemBuilder: (context, index) {
+                final tripCard = state.listTrip[index].toCard();
+                return Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: TripCard(tripCard: tripCard),
+                );
+              },
+            ),
           );
         }
         if (state.failure != null) {
