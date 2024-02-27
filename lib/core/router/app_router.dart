@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hh_test/core/router/app_router_name.dart';
-import 'package:hh_test/screens/authorization_screen.dart';
-import 'package:hh_test/screens/main_screen.dart';
-import 'package:hh_test/screens/splash_screen.dart';
+import 'package:hh_test/screens/authorization/authorization_screen.dart';
+import 'package:hh_test/screens/main/main_screen.dart';
+import 'package:hh_test/screens/splash/splash_screen.dart';
 
 class AppRoutes {
   static final rootNavigationKey = GlobalKey<NavigatorState>();

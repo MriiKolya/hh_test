@@ -16,7 +16,9 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$TripsState {
-  SearchTripsModel get searchTrips => throw _privateConstructorUsedError;
+  String get departureCity => throw _privateConstructorUsedError;
+  String get destinationCity => throw _privateConstructorUsedError;
+  DateTime get tripsData => throw _privateConstructorUsedError;
   List<TripEntity> get listTrip => throw _privateConstructorUsedError;
   bool get loading => throw _privateConstructorUsedError;
   Failure? get failure => throw _privateConstructorUsedError;
@@ -33,7 +35,9 @@ abstract class $TripsStateCopyWith<$Res> {
       _$TripsStateCopyWithImpl<$Res, TripsState>;
   @useResult
   $Res call(
-      {SearchTripsModel searchTrips,
+      {String departureCity,
+      String destinationCity,
+      DateTime tripsData,
       List<TripEntity> listTrip,
       bool loading,
       Failure? failure});
@@ -54,16 +58,26 @@ class _$TripsStateCopyWithImpl<$Res, $Val extends TripsState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? searchTrips = null,
+    Object? departureCity = null,
+    Object? destinationCity = null,
+    Object? tripsData = null,
     Object? listTrip = null,
     Object? loading = null,
     Object? failure = freezed,
   }) {
     return _then(_value.copyWith(
-      searchTrips: null == searchTrips
-          ? _value.searchTrips
-          : searchTrips // ignore: cast_nullable_to_non_nullable
-              as SearchTripsModel,
+      departureCity: null == departureCity
+          ? _value.departureCity
+          : departureCity // ignore: cast_nullable_to_non_nullable
+              as String,
+      destinationCity: null == destinationCity
+          ? _value.destinationCity
+          : destinationCity // ignore: cast_nullable_to_non_nullable
+              as String,
+      tripsData: null == tripsData
+          ? _value.tripsData
+          : tripsData // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       listTrip: null == listTrip
           ? _value.listTrip
           : listTrip // ignore: cast_nullable_to_non_nullable
@@ -101,7 +115,9 @@ abstract class _$$TripsStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {SearchTripsModel searchTrips,
+      {String departureCity,
+      String destinationCity,
+      DateTime tripsData,
       List<TripEntity> listTrip,
       bool loading,
       Failure? failure});
@@ -121,16 +137,26 @@ class __$$TripsStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? searchTrips = null,
+    Object? departureCity = null,
+    Object? destinationCity = null,
+    Object? tripsData = null,
     Object? listTrip = null,
     Object? loading = null,
     Object? failure = freezed,
   }) {
     return _then(_$TripsStateImpl(
-      searchTrips: null == searchTrips
-          ? _value.searchTrips
-          : searchTrips // ignore: cast_nullable_to_non_nullable
-              as SearchTripsModel,
+      departureCity: null == departureCity
+          ? _value.departureCity
+          : departureCity // ignore: cast_nullable_to_non_nullable
+              as String,
+      destinationCity: null == destinationCity
+          ? _value.destinationCity
+          : destinationCity // ignore: cast_nullable_to_non_nullable
+              as String,
+      tripsData: null == tripsData
+          ? _value.tripsData
+          : tripsData // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       listTrip: null == listTrip
           ? _value._listTrip
           : listTrip // ignore: cast_nullable_to_non_nullable
@@ -151,14 +177,22 @@ class __$$TripsStateImplCopyWithImpl<$Res>
 
 class _$TripsStateImpl implements _TripsState {
   const _$TripsStateImpl(
-      {required this.searchTrips,
+      {this.departureCity = '',
+      this.destinationCity = '',
+      required this.tripsData,
       final List<TripEntity> listTrip = const [],
       this.loading = false,
       this.failure})
       : _listTrip = listTrip;
 
   @override
-  final SearchTripsModel searchTrips;
+  @JsonKey()
+  final String departureCity;
+  @override
+  @JsonKey()
+  final String destinationCity;
+  @override
+  final DateTime tripsData;
   final List<TripEntity> _listTrip;
   @override
   @JsonKey()
@@ -176,7 +210,7 @@ class _$TripsStateImpl implements _TripsState {
 
   @override
   String toString() {
-    return 'TripsState(searchTrips: $searchTrips, listTrip: $listTrip, loading: $loading, failure: $failure)';
+    return 'TripsState(departureCity: $departureCity, destinationCity: $destinationCity, tripsData: $tripsData, listTrip: $listTrip, loading: $loading, failure: $failure)';
   }
 
   @override
@@ -184,16 +218,26 @@ class _$TripsStateImpl implements _TripsState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TripsStateImpl &&
-            (identical(other.searchTrips, searchTrips) ||
-                other.searchTrips == searchTrips) &&
+            (identical(other.departureCity, departureCity) ||
+                other.departureCity == departureCity) &&
+            (identical(other.destinationCity, destinationCity) ||
+                other.destinationCity == destinationCity) &&
+            (identical(other.tripsData, tripsData) ||
+                other.tripsData == tripsData) &&
             const DeepCollectionEquality().equals(other._listTrip, _listTrip) &&
             (identical(other.loading, loading) || other.loading == loading) &&
             (identical(other.failure, failure) || other.failure == failure));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, searchTrips,
-      const DeepCollectionEquality().hash(_listTrip), loading, failure);
+  int get hashCode => Object.hash(
+      runtimeType,
+      departureCity,
+      destinationCity,
+      tripsData,
+      const DeepCollectionEquality().hash(_listTrip),
+      loading,
+      failure);
 
   @JsonKey(ignore: true)
   @override
@@ -204,13 +248,19 @@ class _$TripsStateImpl implements _TripsState {
 
 abstract class _TripsState implements TripsState {
   const factory _TripsState(
-      {required final SearchTripsModel searchTrips,
+      {final String departureCity,
+      final String destinationCity,
+      required final DateTime tripsData,
       final List<TripEntity> listTrip,
       final bool loading,
       final Failure? failure}) = _$TripsStateImpl;
 
   @override
-  SearchTripsModel get searchTrips;
+  String get departureCity;
+  @override
+  String get destinationCity;
+  @override
+  DateTime get tripsData;
   @override
   List<TripEntity> get listTrip;
   @override

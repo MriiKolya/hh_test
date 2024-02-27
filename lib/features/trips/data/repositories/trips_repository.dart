@@ -1,18 +1,19 @@
 // ignore_for_file: inference_failure_on_function_invocation
-
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:hh_test/core/api/api_config.dart';
 import 'package:hh_test/core/error/failure.dart';
-import 'package:hh_test/features/model/search_trips.model.dart';
 import 'package:hh_test/features/trips/data/dtos/trip/trip_dto.dart';
 import 'package:hh_test/features/trips/data/entity/trips_entity.dart';
 import 'package:hh_test/features/trips/data/mappers/trip_mapper.dart';
 
 abstract interface class ITripsRepository {
-  Future<Either<Failure, List<TripEntity>>> getTrips(
-      SearchTripsModel searchConfig);
+  Future<Either<Failure, List<TripEntity>>> getTrips({
+    required String destinationCity,
+    required String departureCity,
+    required String dateTime,
+  });
 }
 
 class TripsRepository implements ITripsRepository {
@@ -21,12 +22,17 @@ class TripsRepository implements ITripsRepository {
   TripsRepository({required Dio dio}) : _dio = dio;
 
   @override
-  Future<Either<Failure, List<TripEntity>>> getTrips(
-      SearchTripsModel searchConfig) async {
+  Future<Either<Failure, List<TripEntity>>> getTrips({
+    required String destinationCity,
+    required String departureCity,
+    required String dateTime,
+  }) async {
     try {
       final dtos = <TripDTO>[];
+
       final url =
-          '${ApiTrips.baseUrl}?departure_city=${searchConfig.departureCity}&destination_city=${searchConfig.destinationCity}&date=2024-02-28';
+          '${ApiTrips.baseUrl}?departure_city=$departureCity&destination_city=$destinationCity&date=2024-02-29';
+
       final response = await _dio.get(url);
       final responseData = response.data;
 
