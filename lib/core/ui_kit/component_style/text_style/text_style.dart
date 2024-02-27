@@ -22,13 +22,34 @@ class TextStyles extends ThemeExtension<TextStyles> {
   });
 
   factory TextStyles.light() => TextStyles(
-        h1: AppTypography.h1().copyWith(color: TextColor.black),
-        h2: AppTypography.h2().copyWith(color: TextColor.black),
-        h3: AppTypography.h3().copyWith(color: TextColor.black),
-        h4: AppTypography.h4().copyWith(color: TextColor.black),
-        h5: AppTypography.h5().copyWith(color: TextColor.black),
-        h6: AppTypography.h6().copyWith(color: TextColor.black),
-        h7: AppTypography.h7().copyWith(color: TextColor.black),
+        h1: AppTypography.h1().copyWith(
+          color: TextColor.black,
+          overflow: TextOverflow.ellipsis,
+        ),
+        h2: AppTypography.h2().copyWith(
+          color: TextColor.black,
+          overflow: TextOverflow.ellipsis,
+        ),
+        h3: AppTypography.h3().copyWith(
+          color: TextColor.black,
+          overflow: TextOverflow.ellipsis,
+        ),
+        h4: AppTypography.h4().copyWith(
+          color: TextColor.black,
+          overflow: TextOverflow.ellipsis,
+        ),
+        h5: AppTypography.h5().copyWith(
+          color: TextColor.black,
+          overflow: TextOverflow.ellipsis,
+        ),
+        h6: AppTypography.h6().copyWith(
+          color: TextColor.black,
+          overflow: TextOverflow.ellipsis,
+        ),
+        h7: AppTypography.h7().copyWith(
+          color: TextColor.black,
+          overflow: TextOverflow.ellipsis,
+        ),
       );
 
   @override

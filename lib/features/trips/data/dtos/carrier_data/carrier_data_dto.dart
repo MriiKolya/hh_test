@@ -12,11 +12,10 @@ class CarrierDataDTO with _$CarrierDataDTO {
     @JsonKey(name: 'CarrierName', defaultValue: '') required String name,
     @JsonKey(name: 'CarrierStateRegNum', defaultValue: '')
     required String stateRegNum,
-    @JsonKey(name: 'value', defaultValue: '') required String value,
     @JsonKey(name: 'CarrierPersonalData', defaultValue: [])
     required List<CarrierPersonalDataDTO> carrierPersonalData,
-    @JsonKey(name: 'inputMask', defaultValue: '') required String inputMask,
-    @JsonKey(name: 'valueKind', defaultValue: '') required String valueKind,
+    @JsonKey(name: 'InputMask', defaultValue: '') required String inputMask,
+    @JsonKey(name: 'ValueKind', defaultValue: '') required String valueKind,
   }) = _CarrierDataDTO;
 
   factory CarrierDataDTO.fromJson(Map<String, dynamic> json) =>

@@ -27,6 +27,8 @@ mixin _$CarrierPersonalDataDTO {
   String get caption => throw _privateConstructorUsedError;
   @JsonKey(name: 'Mandatory', defaultValue: false)
   bool get mandatory => throw _privateConstructorUsedError;
+  @JsonKey(name: 'Value', defaultValue: '')
+  String get value => throw _privateConstructorUsedError;
   @JsonKey(name: 'PersonIdentifier', defaultValue: false)
   bool get personIdentifier => throw _privateConstructorUsedError;
   @JsonKey(name: 'Type', defaultValue: '')
@@ -48,6 +50,7 @@ abstract class $CarrierPersonalDataDTOCopyWith<$Res> {
       {@JsonKey(name: 'Name', defaultValue: '') String name,
       @JsonKey(name: 'Caption', defaultValue: '') String caption,
       @JsonKey(name: 'Mandatory', defaultValue: false) bool mandatory,
+      @JsonKey(name: 'Value', defaultValue: '') String value,
       @JsonKey(name: 'PersonIdentifier', defaultValue: false)
       bool personIdentifier,
       @JsonKey(name: 'Type', defaultValue: '') String type});
@@ -70,6 +73,7 @@ class _$CarrierPersonalDataDTOCopyWithImpl<$Res,
     Object? name = null,
     Object? caption = null,
     Object? mandatory = null,
+    Object? value = null,
     Object? personIdentifier = null,
     Object? type = null,
   }) {
@@ -86,6 +90,10 @@ class _$CarrierPersonalDataDTOCopyWithImpl<$Res,
           ? _value.mandatory
           : mandatory // ignore: cast_nullable_to_non_nullable
               as bool,
+      value: null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String,
       personIdentifier: null == personIdentifier
           ? _value.personIdentifier
           : personIdentifier // ignore: cast_nullable_to_non_nullable
@@ -111,6 +119,7 @@ abstract class _$$CarrierPersonalDataDTOImplCopyWith<$Res>
       {@JsonKey(name: 'Name', defaultValue: '') String name,
       @JsonKey(name: 'Caption', defaultValue: '') String caption,
       @JsonKey(name: 'Mandatory', defaultValue: false) bool mandatory,
+      @JsonKey(name: 'Value', defaultValue: '') String value,
       @JsonKey(name: 'PersonIdentifier', defaultValue: false)
       bool personIdentifier,
       @JsonKey(name: 'Type', defaultValue: '') String type});
@@ -132,6 +141,7 @@ class __$$CarrierPersonalDataDTOImplCopyWithImpl<$Res>
     Object? name = null,
     Object? caption = null,
     Object? mandatory = null,
+    Object? value = null,
     Object? personIdentifier = null,
     Object? type = null,
   }) {
@@ -148,6 +158,10 @@ class __$$CarrierPersonalDataDTOImplCopyWithImpl<$Res>
           ? _value.mandatory
           : mandatory // ignore: cast_nullable_to_non_nullable
               as bool,
+      value: null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String,
       personIdentifier: null == personIdentifier
           ? _value.personIdentifier
           : personIdentifier // ignore: cast_nullable_to_non_nullable
@@ -167,6 +181,7 @@ class _$CarrierPersonalDataDTOImpl extends _CarrierPersonalDataDTO {
       {@JsonKey(name: 'Name', defaultValue: '') required this.name,
       @JsonKey(name: 'Caption', defaultValue: '') required this.caption,
       @JsonKey(name: 'Mandatory', defaultValue: false) required this.mandatory,
+      @JsonKey(name: 'Value', defaultValue: '') required this.value,
       @JsonKey(name: 'PersonIdentifier', defaultValue: false)
       required this.personIdentifier,
       @JsonKey(name: 'Type', defaultValue: '') required this.type})
@@ -185,6 +200,9 @@ class _$CarrierPersonalDataDTOImpl extends _CarrierPersonalDataDTO {
   @JsonKey(name: 'Mandatory', defaultValue: false)
   final bool mandatory;
   @override
+  @JsonKey(name: 'Value', defaultValue: '')
+  final String value;
+  @override
   @JsonKey(name: 'PersonIdentifier', defaultValue: false)
   final bool personIdentifier;
   @override
@@ -193,7 +211,7 @@ class _$CarrierPersonalDataDTOImpl extends _CarrierPersonalDataDTO {
 
   @override
   String toString() {
-    return 'CarrierPersonalDataDTO(name: $name, caption: $caption, mandatory: $mandatory, personIdentifier: $personIdentifier, type: $type)';
+    return 'CarrierPersonalDataDTO(name: $name, caption: $caption, mandatory: $mandatory, value: $value, personIdentifier: $personIdentifier, type: $type)';
   }
 
   @override
@@ -205,6 +223,7 @@ class _$CarrierPersonalDataDTOImpl extends _CarrierPersonalDataDTO {
             (identical(other.caption, caption) || other.caption == caption) &&
             (identical(other.mandatory, mandatory) ||
                 other.mandatory == mandatory) &&
+            (identical(other.value, value) || other.value == value) &&
             (identical(other.personIdentifier, personIdentifier) ||
                 other.personIdentifier == personIdentifier) &&
             (identical(other.type, type) || other.type == type));
@@ -213,7 +232,7 @@ class _$CarrierPersonalDataDTOImpl extends _CarrierPersonalDataDTO {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, name, caption, mandatory, personIdentifier, type);
+      runtimeType, name, caption, mandatory, value, personIdentifier, type);
 
   @JsonKey(ignore: true)
   @override
@@ -236,6 +255,7 @@ abstract class _CarrierPersonalDataDTO extends CarrierPersonalDataDTO {
       @JsonKey(name: 'Caption', defaultValue: '') required final String caption,
       @JsonKey(name: 'Mandatory', defaultValue: false)
       required final bool mandatory,
+      @JsonKey(name: 'Value', defaultValue: '') required final String value,
       @JsonKey(name: 'PersonIdentifier', defaultValue: false)
       required final bool personIdentifier,
       @JsonKey(name: 'Type', defaultValue: '')
@@ -254,6 +274,9 @@ abstract class _CarrierPersonalDataDTO extends CarrierPersonalDataDTO {
   @override
   @JsonKey(name: 'Mandatory', defaultValue: false)
   bool get mandatory;
+  @override
+  @JsonKey(name: 'Value', defaultValue: '')
+  String get value;
   @override
   @JsonKey(name: 'PersonIdentifier', defaultValue: false)
   bool get personIdentifier;

@@ -26,14 +26,12 @@ mixin _$CarrierDataDTO {
   String get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'CarrierStateRegNum', defaultValue: '')
   String get stateRegNum => throw _privateConstructorUsedError;
-  @JsonKey(name: 'value', defaultValue: '')
-  String get value => throw _privateConstructorUsedError;
   @JsonKey(name: 'CarrierPersonalData', defaultValue: [])
   List<CarrierPersonalDataDTO> get carrierPersonalData =>
       throw _privateConstructorUsedError;
-  @JsonKey(name: 'inputMask', defaultValue: '')
+  @JsonKey(name: 'InputMask', defaultValue: '')
   String get inputMask => throw _privateConstructorUsedError;
-  @JsonKey(name: 'valueKind', defaultValue: '')
+  @JsonKey(name: 'ValueKind', defaultValue: '')
   String get valueKind => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -52,11 +50,10 @@ abstract class $CarrierDataDTOCopyWith<$Res> {
       {@JsonKey(name: 'CarrierTaxId', defaultValue: '') String taxId,
       @JsonKey(name: 'CarrierName', defaultValue: '') String name,
       @JsonKey(name: 'CarrierStateRegNum', defaultValue: '') String stateRegNum,
-      @JsonKey(name: 'value', defaultValue: '') String value,
       @JsonKey(name: 'CarrierPersonalData', defaultValue: [])
       List<CarrierPersonalDataDTO> carrierPersonalData,
-      @JsonKey(name: 'inputMask', defaultValue: '') String inputMask,
-      @JsonKey(name: 'valueKind', defaultValue: '') String valueKind});
+      @JsonKey(name: 'InputMask', defaultValue: '') String inputMask,
+      @JsonKey(name: 'ValueKind', defaultValue: '') String valueKind});
 }
 
 /// @nodoc
@@ -75,7 +72,6 @@ class _$CarrierDataDTOCopyWithImpl<$Res, $Val extends CarrierDataDTO>
     Object? taxId = null,
     Object? name = null,
     Object? stateRegNum = null,
-    Object? value = null,
     Object? carrierPersonalData = null,
     Object? inputMask = null,
     Object? valueKind = null,
@@ -92,10 +88,6 @@ class _$CarrierDataDTOCopyWithImpl<$Res, $Val extends CarrierDataDTO>
       stateRegNum: null == stateRegNum
           ? _value.stateRegNum
           : stateRegNum // ignore: cast_nullable_to_non_nullable
-              as String,
-      value: null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
               as String,
       carrierPersonalData: null == carrierPersonalData
           ? _value.carrierPersonalData
@@ -125,11 +117,10 @@ abstract class _$$CarrierDataDTOImplCopyWith<$Res>
       {@JsonKey(name: 'CarrierTaxId', defaultValue: '') String taxId,
       @JsonKey(name: 'CarrierName', defaultValue: '') String name,
       @JsonKey(name: 'CarrierStateRegNum', defaultValue: '') String stateRegNum,
-      @JsonKey(name: 'value', defaultValue: '') String value,
       @JsonKey(name: 'CarrierPersonalData', defaultValue: [])
       List<CarrierPersonalDataDTO> carrierPersonalData,
-      @JsonKey(name: 'inputMask', defaultValue: '') String inputMask,
-      @JsonKey(name: 'valueKind', defaultValue: '') String valueKind});
+      @JsonKey(name: 'InputMask', defaultValue: '') String inputMask,
+      @JsonKey(name: 'ValueKind', defaultValue: '') String valueKind});
 }
 
 /// @nodoc
@@ -146,7 +137,6 @@ class __$$CarrierDataDTOImplCopyWithImpl<$Res>
     Object? taxId = null,
     Object? name = null,
     Object? stateRegNum = null,
-    Object? value = null,
     Object? carrierPersonalData = null,
     Object? inputMask = null,
     Object? valueKind = null,
@@ -163,10 +153,6 @@ class __$$CarrierDataDTOImplCopyWithImpl<$Res>
       stateRegNum: null == stateRegNum
           ? _value.stateRegNum
           : stateRegNum // ignore: cast_nullable_to_non_nullable
-              as String,
-      value: null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
               as String,
       carrierPersonalData: null == carrierPersonalData
           ? _value._carrierPersonalData
@@ -192,11 +178,10 @@ class _$CarrierDataDTOImpl extends _CarrierDataDTO {
       @JsonKey(name: 'CarrierName', defaultValue: '') required this.name,
       @JsonKey(name: 'CarrierStateRegNum', defaultValue: '')
       required this.stateRegNum,
-      @JsonKey(name: 'value', defaultValue: '') required this.value,
       @JsonKey(name: 'CarrierPersonalData', defaultValue: [])
       required final List<CarrierPersonalDataDTO> carrierPersonalData,
-      @JsonKey(name: 'inputMask', defaultValue: '') required this.inputMask,
-      @JsonKey(name: 'valueKind', defaultValue: '') required this.valueKind})
+      @JsonKey(name: 'InputMask', defaultValue: '') required this.inputMask,
+      @JsonKey(name: 'ValueKind', defaultValue: '') required this.valueKind})
       : _carrierPersonalData = carrierPersonalData,
         super._();
 
@@ -212,9 +197,6 @@ class _$CarrierDataDTOImpl extends _CarrierDataDTO {
   @override
   @JsonKey(name: 'CarrierStateRegNum', defaultValue: '')
   final String stateRegNum;
-  @override
-  @JsonKey(name: 'value', defaultValue: '')
-  final String value;
   final List<CarrierPersonalDataDTO> _carrierPersonalData;
   @override
   @JsonKey(name: 'CarrierPersonalData', defaultValue: [])
@@ -226,15 +208,15 @@ class _$CarrierDataDTOImpl extends _CarrierDataDTO {
   }
 
   @override
-  @JsonKey(name: 'inputMask', defaultValue: '')
+  @JsonKey(name: 'InputMask', defaultValue: '')
   final String inputMask;
   @override
-  @JsonKey(name: 'valueKind', defaultValue: '')
+  @JsonKey(name: 'ValueKind', defaultValue: '')
   final String valueKind;
 
   @override
   String toString() {
-    return 'CarrierDataDTO(taxId: $taxId, name: $name, stateRegNum: $stateRegNum, value: $value, carrierPersonalData: $carrierPersonalData, inputMask: $inputMask, valueKind: $valueKind)';
+    return 'CarrierDataDTO(taxId: $taxId, name: $name, stateRegNum: $stateRegNum, carrierPersonalData: $carrierPersonalData, inputMask: $inputMask, valueKind: $valueKind)';
   }
 
   @override
@@ -246,7 +228,6 @@ class _$CarrierDataDTOImpl extends _CarrierDataDTO {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.stateRegNum, stateRegNum) ||
                 other.stateRegNum == stateRegNum) &&
-            (identical(other.value, value) || other.value == value) &&
             const DeepCollectionEquality()
                 .equals(other._carrierPersonalData, _carrierPersonalData) &&
             (identical(other.inputMask, inputMask) ||
@@ -262,7 +243,6 @@ class _$CarrierDataDTOImpl extends _CarrierDataDTO {
       taxId,
       name,
       stateRegNum,
-      value,
       const DeepCollectionEquality().hash(_carrierPersonalData),
       inputMask,
       valueKind);
@@ -290,12 +270,11 @@ abstract class _CarrierDataDTO extends CarrierDataDTO {
       required final String name,
       @JsonKey(name: 'CarrierStateRegNum', defaultValue: '')
       required final String stateRegNum,
-      @JsonKey(name: 'value', defaultValue: '') required final String value,
       @JsonKey(name: 'CarrierPersonalData', defaultValue: [])
       required final List<CarrierPersonalDataDTO> carrierPersonalData,
-      @JsonKey(name: 'inputMask', defaultValue: '')
+      @JsonKey(name: 'InputMask', defaultValue: '')
       required final String inputMask,
-      @JsonKey(name: 'valueKind', defaultValue: '')
+      @JsonKey(name: 'ValueKind', defaultValue: '')
       required final String valueKind}) = _$CarrierDataDTOImpl;
   _CarrierDataDTO._() : super._();
 
@@ -312,16 +291,13 @@ abstract class _CarrierDataDTO extends CarrierDataDTO {
   @JsonKey(name: 'CarrierStateRegNum', defaultValue: '')
   String get stateRegNum;
   @override
-  @JsonKey(name: 'value', defaultValue: '')
-  String get value;
-  @override
   @JsonKey(name: 'CarrierPersonalData', defaultValue: [])
   List<CarrierPersonalDataDTO> get carrierPersonalData;
   @override
-  @JsonKey(name: 'inputMask', defaultValue: '')
+  @JsonKey(name: 'InputMask', defaultValue: '')
   String get inputMask;
   @override
-  @JsonKey(name: 'valueKind', defaultValue: '')
+  @JsonKey(name: 'ValueKind', defaultValue: '')
   String get valueKind;
   @override
   @JsonKey(ignore: true)

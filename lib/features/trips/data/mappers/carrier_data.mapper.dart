@@ -9,7 +9,6 @@ extension CarrierDataMapper on CarrierDataDTO {
         stateRegNum: stateRegNum,
         carrierPersonalData:
             carrierPersonalData.map((e) => e.toDomain()).toList(),
-        value: value,
         inputMask: inputMask,
         valueKind: valueKind,
       );

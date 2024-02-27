@@ -12,6 +12,7 @@ _$CarrierPersonalDataDTOImpl _$$CarrierPersonalDataDTOImplFromJson(
       name: json['Name'] as String? ?? '',
       caption: json['Caption'] as String? ?? '',
       mandatory: json['Mandatory'] as bool? ?? false,
+      value: json['Value'] as String? ?? '',
       personIdentifier: json['PersonIdentifier'] as bool? ?? false,
       type: json['Type'] as String? ?? '',
     );
@@ -22,6 +23,7 @@ Map<String, dynamic> _$$CarrierPersonalDataDTOImplToJson(
       'Name': instance.name,
       'Caption': instance.caption,
       'Mandatory': instance.mandatory,
+      'Value': instance.value,
       'PersonIdentifier': instance.personIdentifier,
       'Type': instance.type,
     };

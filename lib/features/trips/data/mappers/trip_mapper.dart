@@ -1,3 +1,4 @@
+import 'package:hh_test/core/utils/date_time_parse.dart';
 import 'package:hh_test/features/trips/data/dtos/trip/trip_dto.dart';
 import 'package:hh_test/features/trips/data/entity/trips_entity.dart';
 import 'package:hh_test/features/trips/data/mappers/bus_mapper.dart';
@@ -22,11 +23,11 @@ extension TripMapper on TripDTO {
         statusComment: statusComment,
         statusDate: statusDate,
         departure: departure.toDomain(),
-        departureTime: departureTime,
-        arrivalToDepartureTime: arrivalToDepartureTime,
+        departureTime: parseDateTime(departureTime),
+        arrivalToDepartureTime:  parseDateTime(arrivalToDepartureTime),
         destination: destination.toDomain(),
         distance: distance,
-        arrivalTime: arrivalTime,
+        arrivalTime: parseDateTime(arrivalTime),
         duration: duration,
         transitSeats: transitSeats,
         freeSeatsAmount: freeSeatsAmount,

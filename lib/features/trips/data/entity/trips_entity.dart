@@ -21,11 +21,11 @@ class TripEntity extends Equatable {
   final String? statusComment;
   final String? statusDate;
   final DepartureEntity departure;
-  final String departureTime;
-  final String arrivalToDepartureTime;
+  final DateTime? departureTime;
+  final DateTime? arrivalToDepartureTime;
+  final DateTime? arrivalTime;
   final DestinationEntity destination;
   final String distance;
-  final String arrivalTime;
   final int duration;
   final bool transitSeats;
   final int freeSeatsAmount;
@@ -54,11 +54,11 @@ class TripEntity extends Equatable {
     required this.statusComment,
     required this.statusDate,
     required this.departure,
-    required this.departureTime,
-    required this.arrivalToDepartureTime,
+    this.departureTime,
+    this.arrivalToDepartureTime,
+    this.arrivalTime,
     required this.destination,
     required this.distance,
-    required this.arrivalTime,
     required this.duration,
     required this.transitSeats,
     required this.freeSeatsAmount,

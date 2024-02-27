@@ -6,7 +6,7 @@ class CarrierDataEntity extends Equatable {
   final String taxId;
   final String stateRegNum;
   final List<CarrierPersonalDataEntity> carrierPersonalData;
-  final String value;
+
   final String? inputMask;
   final String? valueKind;
 
@@ -15,7 +15,6 @@ class CarrierDataEntity extends Equatable {
       required this.taxId,
       required this.stateRegNum,
       required this.carrierPersonalData,
-      required this.value,
       required this.inputMask,
       required this.valueKind});
 
@@ -26,7 +25,6 @@ class CarrierDataEntity extends Equatable {
       taxId,
       stateRegNum,
       carrierPersonalData,
-      value,
       inputMask,
       valueKind,
     ];

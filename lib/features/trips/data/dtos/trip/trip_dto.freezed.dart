@@ -20,67 +20,67 @@ TripDTO _$TripDTOFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TripDTO {
-  @JsonKey(name: 'Id')
+  @JsonKey(name: 'Id', defaultValue: '')
   String get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'RouteId')
+  @JsonKey(name: 'RouteId', defaultValue: '')
   String get routeId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'ScheduleTripId')
+  @JsonKey(name: 'ScheduleTripId', defaultValue: '')
   String get scheduleTripId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'RouteName')
+  @JsonKey(name: 'RouteName', defaultValue: '')
   String get routeName => throw _privateConstructorUsedError;
-  @JsonKey(name: 'RouteNum')
+  @JsonKey(name: 'RouteNum', defaultValue: '')
   String get routeNum => throw _privateConstructorUsedError;
-  @JsonKey(name: 'Carrier')
+  @JsonKey(name: 'Carrier', defaultValue: '')
   String get carrier => throw _privateConstructorUsedError;
   @JsonKey(name: 'Bus')
   BusDTO get bus => throw _privateConstructorUsedError;
-  @JsonKey(name: 'Driver1')
+  @JsonKey(name: 'Driver1', defaultValue: '')
   String get driver1 => throw _privateConstructorUsedError;
-  @JsonKey(name: 'Driver2')
+  @JsonKey(name: 'Driver2', defaultValue: '')
   String get driver2 => throw _privateConstructorUsedError;
-  @JsonKey(name: 'Frequency')
+  @JsonKey(name: 'Frequency', defaultValue: '')
   String get frequency => throw _privateConstructorUsedError;
-  @JsonKey(name: 'Status')
+  @JsonKey(name: 'Status', defaultValue: '')
   String get status => throw _privateConstructorUsedError;
-  @JsonKey(name: 'StatusPrint')
+  @JsonKey(name: 'StatusPrint', defaultValue: '')
   String get statusPrint => throw _privateConstructorUsedError;
-  @JsonKey(name: 'StatusComment')
+  @JsonKey(name: 'StatusComment', defaultValue: '')
   String get statusComment => throw _privateConstructorUsedError;
-  @JsonKey(name: 'StatusDate')
+  @JsonKey(name: 'StatusDate', defaultValue: '')
   String get statusDate => throw _privateConstructorUsedError;
   @JsonKey(name: 'Departure')
   DepartureDTO get departure => throw _privateConstructorUsedError;
-  @JsonKey(name: 'DepartureTime')
+  @JsonKey(name: 'DepartureTime', defaultValue: '')
   String get departureTime => throw _privateConstructorUsedError;
-  @JsonKey(name: 'ArrivalToDepartureTime')
+  @JsonKey(name: 'ArrivalToDepartureTime', defaultValue: '')
   String get arrivalToDepartureTime => throw _privateConstructorUsedError;
   @JsonKey(name: 'Destination')
   DestinationDTO get destination => throw _privateConstructorUsedError;
-  @JsonKey(name: 'ArrivalTime')
+  @JsonKey(name: 'ArrivalTime', defaultValue: '')
   String get arrivalTime => throw _privateConstructorUsedError;
-  @JsonKey(name: 'Distance')
+  @JsonKey(name: 'Distance', defaultValue: '')
   String get distance => throw _privateConstructorUsedError;
-  @JsonKey(name: 'Duration')
+  @JsonKey(name: 'Duration', defaultValue: 0)
   int get duration => throw _privateConstructorUsedError;
-  @JsonKey(name: 'TransitSeats')
+  @JsonKey(name: 'TransitSeats', defaultValue: false)
   bool get transitSeats => throw _privateConstructorUsedError;
-  @JsonKey(name: 'FreeSeatsAmount')
+  @JsonKey(name: 'FreeSeatsAmount', defaultValue: 0)
   int get freeSeatsAmount => throw _privateConstructorUsedError;
-  @JsonKey(name: 'PassengerFareCost')
+  @JsonKey(name: 'PassengerFareCost', defaultValue: '')
   String get passengerFareCost => throw _privateConstructorUsedError;
-  @JsonKey(name: 'Platform')
+  @JsonKey(name: 'Platform', defaultValue: 1)
   int get platform => throw _privateConstructorUsedError;
-  @JsonKey(name: 'OnSale')
+  @JsonKey(name: 'OnSale', defaultValue: false)
   bool get onSale => throw _privateConstructorUsedError;
-  @JsonKey(name: 'Additional')
+  @JsonKey(name: 'Additional', defaultValue: false)
   bool get additional => throw _privateConstructorUsedError;
-  @JsonKey(name: 'Currency')
+  @JsonKey(name: 'Currency', defaultValue: '')
   String get currency => throw _privateConstructorUsedError;
-  @JsonKey(name: 'PrincipalTaxId')
+  @JsonKey(name: 'PrincipalTaxId', defaultValue: '')
   String get principalTaxId => throw _privateConstructorUsedError;
   @JsonKey(name: 'CarrierData')
   CarrierDataDTO get carrierData => throw _privateConstructorUsedError;
-  @JsonKey(name: 'PassengerFareCostAvibus')
+  @JsonKey(name: 'PassengerFareCostAvibus', defaultValue: '')
   String get passengerFareCostAvibus => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -94,37 +94,39 @@ abstract class $TripDTOCopyWith<$Res> {
       _$TripDTOCopyWithImpl<$Res, TripDTO>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'Id') String id,
-      @JsonKey(name: 'RouteId') String routeId,
-      @JsonKey(name: 'ScheduleTripId') String scheduleTripId,
-      @JsonKey(name: 'RouteName') String routeName,
-      @JsonKey(name: 'RouteNum') String routeNum,
-      @JsonKey(name: 'Carrier') String carrier,
+      {@JsonKey(name: 'Id', defaultValue: '') String id,
+      @JsonKey(name: 'RouteId', defaultValue: '') String routeId,
+      @JsonKey(name: 'ScheduleTripId', defaultValue: '') String scheduleTripId,
+      @JsonKey(name: 'RouteName', defaultValue: '') String routeName,
+      @JsonKey(name: 'RouteNum', defaultValue: '') String routeNum,
+      @JsonKey(name: 'Carrier', defaultValue: '') String carrier,
       @JsonKey(name: 'Bus') BusDTO bus,
-      @JsonKey(name: 'Driver1') String driver1,
-      @JsonKey(name: 'Driver2') String driver2,
-      @JsonKey(name: 'Frequency') String frequency,
-      @JsonKey(name: 'Status') String status,
-      @JsonKey(name: 'StatusPrint') String statusPrint,
-      @JsonKey(name: 'StatusComment') String statusComment,
-      @JsonKey(name: 'StatusDate') String statusDate,
+      @JsonKey(name: 'Driver1', defaultValue: '') String driver1,
+      @JsonKey(name: 'Driver2', defaultValue: '') String driver2,
+      @JsonKey(name: 'Frequency', defaultValue: '') String frequency,
+      @JsonKey(name: 'Status', defaultValue: '') String status,
+      @JsonKey(name: 'StatusPrint', defaultValue: '') String statusPrint,
+      @JsonKey(name: 'StatusComment', defaultValue: '') String statusComment,
+      @JsonKey(name: 'StatusDate', defaultValue: '') String statusDate,
       @JsonKey(name: 'Departure') DepartureDTO departure,
-      @JsonKey(name: 'DepartureTime') String departureTime,
-      @JsonKey(name: 'ArrivalToDepartureTime') String arrivalToDepartureTime,
+      @JsonKey(name: 'DepartureTime', defaultValue: '') String departureTime,
+      @JsonKey(name: 'ArrivalToDepartureTime', defaultValue: '')
+      String arrivalToDepartureTime,
       @JsonKey(name: 'Destination') DestinationDTO destination,
-      @JsonKey(name: 'ArrivalTime') String arrivalTime,
-      @JsonKey(name: 'Distance') String distance,
-      @JsonKey(name: 'Duration') int duration,
-      @JsonKey(name: 'TransitSeats') bool transitSeats,
-      @JsonKey(name: 'FreeSeatsAmount') int freeSeatsAmount,
-      @JsonKey(name: 'PassengerFareCost') String passengerFareCost,
-      @JsonKey(name: 'Platform') int platform,
-      @JsonKey(name: 'OnSale') bool onSale,
-      @JsonKey(name: 'Additional') bool additional,
-      @JsonKey(name: 'Currency') String currency,
-      @JsonKey(name: 'PrincipalTaxId') String principalTaxId,
+      @JsonKey(name: 'ArrivalTime', defaultValue: '') String arrivalTime,
+      @JsonKey(name: 'Distance', defaultValue: '') String distance,
+      @JsonKey(name: 'Duration', defaultValue: 0) int duration,
+      @JsonKey(name: 'TransitSeats', defaultValue: false) bool transitSeats,
+      @JsonKey(name: 'FreeSeatsAmount', defaultValue: 0) int freeSeatsAmount,
+      @JsonKey(name: 'PassengerFareCost', defaultValue: '')
+      String passengerFareCost,
+      @JsonKey(name: 'Platform', defaultValue: 1) int platform,
+      @JsonKey(name: 'OnSale', defaultValue: false) bool onSale,
+      @JsonKey(name: 'Additional', defaultValue: false) bool additional,
+      @JsonKey(name: 'Currency', defaultValue: '') String currency,
+      @JsonKey(name: 'PrincipalTaxId', defaultValue: '') String principalTaxId,
       @JsonKey(name: 'CarrierData') CarrierDataDTO carrierData,
-      @JsonKey(name: 'PassengerFareCostAvibus')
+      @JsonKey(name: 'PassengerFareCostAvibus', defaultValue: '')
       String passengerFareCostAvibus});
 
   $BusDTOCopyWith<$Res> get bus;
@@ -347,37 +349,39 @@ abstract class _$$TripDTOImplCopyWith<$Res> implements $TripDTOCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'Id') String id,
-      @JsonKey(name: 'RouteId') String routeId,
-      @JsonKey(name: 'ScheduleTripId') String scheduleTripId,
-      @JsonKey(name: 'RouteName') String routeName,
-      @JsonKey(name: 'RouteNum') String routeNum,
-      @JsonKey(name: 'Carrier') String carrier,
+      {@JsonKey(name: 'Id', defaultValue: '') String id,
+      @JsonKey(name: 'RouteId', defaultValue: '') String routeId,
+      @JsonKey(name: 'ScheduleTripId', defaultValue: '') String scheduleTripId,
+      @JsonKey(name: 'RouteName', defaultValue: '') String routeName,
+      @JsonKey(name: 'RouteNum', defaultValue: '') String routeNum,
+      @JsonKey(name: 'Carrier', defaultValue: '') String carrier,
       @JsonKey(name: 'Bus') BusDTO bus,
-      @JsonKey(name: 'Driver1') String driver1,
-      @JsonKey(name: 'Driver2') String driver2,
-      @JsonKey(name: 'Frequency') String frequency,
-      @JsonKey(name: 'Status') String status,
-      @JsonKey(name: 'StatusPrint') String statusPrint,
-      @JsonKey(name: 'StatusComment') String statusComment,
-      @JsonKey(name: 'StatusDate') String statusDate,
+      @JsonKey(name: 'Driver1', defaultValue: '') String driver1,
+      @JsonKey(name: 'Driver2', defaultValue: '') String driver2,
+      @JsonKey(name: 'Frequency', defaultValue: '') String frequency,
+      @JsonKey(name: 'Status', defaultValue: '') String status,
+      @JsonKey(name: 'StatusPrint', defaultValue: '') String statusPrint,
+      @JsonKey(name: 'StatusComment', defaultValue: '') String statusComment,
+      @JsonKey(name: 'StatusDate', defaultValue: '') String statusDate,
       @JsonKey(name: 'Departure') DepartureDTO departure,
-      @JsonKey(name: 'DepartureTime') String departureTime,
-      @JsonKey(name: 'ArrivalToDepartureTime') String arrivalToDepartureTime,
+      @JsonKey(name: 'DepartureTime', defaultValue: '') String departureTime,
+      @JsonKey(name: 'ArrivalToDepartureTime', defaultValue: '')
+      String arrivalToDepartureTime,
       @JsonKey(name: 'Destination') DestinationDTO destination,
-      @JsonKey(name: 'ArrivalTime') String arrivalTime,
-      @JsonKey(name: 'Distance') String distance,
-      @JsonKey(name: 'Duration') int duration,
-      @JsonKey(name: 'TransitSeats') bool transitSeats,
-      @JsonKey(name: 'FreeSeatsAmount') int freeSeatsAmount,
-      @JsonKey(name: 'PassengerFareCost') String passengerFareCost,
-      @JsonKey(name: 'Platform') int platform,
-      @JsonKey(name: 'OnSale') bool onSale,
-      @JsonKey(name: 'Additional') bool additional,
-      @JsonKey(name: 'Currency') String currency,
-      @JsonKey(name: 'PrincipalTaxId') String principalTaxId,
+      @JsonKey(name: 'ArrivalTime', defaultValue: '') String arrivalTime,
+      @JsonKey(name: 'Distance', defaultValue: '') String distance,
+      @JsonKey(name: 'Duration', defaultValue: 0) int duration,
+      @JsonKey(name: 'TransitSeats', defaultValue: false) bool transitSeats,
+      @JsonKey(name: 'FreeSeatsAmount', defaultValue: 0) int freeSeatsAmount,
+      @JsonKey(name: 'PassengerFareCost', defaultValue: '')
+      String passengerFareCost,
+      @JsonKey(name: 'Platform', defaultValue: 1) int platform,
+      @JsonKey(name: 'OnSale', defaultValue: false) bool onSale,
+      @JsonKey(name: 'Additional', defaultValue: false) bool additional,
+      @JsonKey(name: 'Currency', defaultValue: '') String currency,
+      @JsonKey(name: 'PrincipalTaxId', defaultValue: '') String principalTaxId,
       @JsonKey(name: 'CarrierData') CarrierDataDTO carrierData,
-      @JsonKey(name: 'PassengerFareCostAvibus')
+      @JsonKey(name: 'PassengerFareCostAvibus', defaultValue: '')
       String passengerFareCostAvibus});
 
   @override
@@ -566,38 +570,46 @@ class __$$TripDTOImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TripDTOImpl extends _TripDTO {
   _$TripDTOImpl(
-      {@JsonKey(name: 'Id') required this.id,
-      @JsonKey(name: 'RouteId') required this.routeId,
-      @JsonKey(name: 'ScheduleTripId') required this.scheduleTripId,
-      @JsonKey(name: 'RouteName') required this.routeName,
-      @JsonKey(name: 'RouteNum') required this.routeNum,
-      @JsonKey(name: 'Carrier') required this.carrier,
+      {@JsonKey(name: 'Id', defaultValue: '') required this.id,
+      @JsonKey(name: 'RouteId', defaultValue: '') required this.routeId,
+      @JsonKey(name: 'ScheduleTripId', defaultValue: '')
+      required this.scheduleTripId,
+      @JsonKey(name: 'RouteName', defaultValue: '') required this.routeName,
+      @JsonKey(name: 'RouteNum', defaultValue: '') required this.routeNum,
+      @JsonKey(name: 'Carrier', defaultValue: '') required this.carrier,
       @JsonKey(name: 'Bus') required this.bus,
-      @JsonKey(name: 'Driver1') required this.driver1,
-      @JsonKey(name: 'Driver2') required this.driver2,
-      @JsonKey(name: 'Frequency') required this.frequency,
-      @JsonKey(name: 'Status') required this.status,
-      @JsonKey(name: 'StatusPrint') required this.statusPrint,
-      @JsonKey(name: 'StatusComment') required this.statusComment,
-      @JsonKey(name: 'StatusDate') required this.statusDate,
+      @JsonKey(name: 'Driver1', defaultValue: '') required this.driver1,
+      @JsonKey(name: 'Driver2', defaultValue: '') required this.driver2,
+      @JsonKey(name: 'Frequency', defaultValue: '') required this.frequency,
+      @JsonKey(name: 'Status', defaultValue: '') required this.status,
+      @JsonKey(name: 'StatusPrint', defaultValue: '') required this.statusPrint,
+      @JsonKey(name: 'StatusComment', defaultValue: '')
+      required this.statusComment,
+      @JsonKey(name: 'StatusDate', defaultValue: '') required this.statusDate,
       @JsonKey(name: 'Departure') required this.departure,
-      @JsonKey(name: 'DepartureTime') required this.departureTime,
-      @JsonKey(name: 'ArrivalToDepartureTime')
+      @JsonKey(name: 'DepartureTime', defaultValue: '')
+      required this.departureTime,
+      @JsonKey(name: 'ArrivalToDepartureTime', defaultValue: '')
       required this.arrivalToDepartureTime,
       @JsonKey(name: 'Destination') required this.destination,
-      @JsonKey(name: 'ArrivalTime') required this.arrivalTime,
-      @JsonKey(name: 'Distance') required this.distance,
-      @JsonKey(name: 'Duration') required this.duration,
-      @JsonKey(name: 'TransitSeats') required this.transitSeats,
-      @JsonKey(name: 'FreeSeatsAmount') required this.freeSeatsAmount,
-      @JsonKey(name: 'PassengerFareCost') required this.passengerFareCost,
-      @JsonKey(name: 'Platform') required this.platform,
-      @JsonKey(name: 'OnSale') required this.onSale,
-      @JsonKey(name: 'Additional') required this.additional,
-      @JsonKey(name: 'Currency') required this.currency,
-      @JsonKey(name: 'PrincipalTaxId') required this.principalTaxId,
+      @JsonKey(name: 'ArrivalTime', defaultValue: '') required this.arrivalTime,
+      @JsonKey(name: 'Distance', defaultValue: '') required this.distance,
+      @JsonKey(name: 'Duration', defaultValue: 0) required this.duration,
+      @JsonKey(name: 'TransitSeats', defaultValue: false)
+      required this.transitSeats,
+      @JsonKey(name: 'FreeSeatsAmount', defaultValue: 0)
+      required this.freeSeatsAmount,
+      @JsonKey(name: 'PassengerFareCost', defaultValue: '')
+      required this.passengerFareCost,
+      @JsonKey(name: 'Platform', defaultValue: 1) required this.platform,
+      @JsonKey(name: 'OnSale', defaultValue: false) required this.onSale,
+      @JsonKey(name: 'Additional', defaultValue: false)
+      required this.additional,
+      @JsonKey(name: 'Currency', defaultValue: '') required this.currency,
+      @JsonKey(name: 'PrincipalTaxId', defaultValue: '')
+      required this.principalTaxId,
       @JsonKey(name: 'CarrierData') required this.carrierData,
-      @JsonKey(name: 'PassengerFareCostAvibus')
+      @JsonKey(name: 'PassengerFareCostAvibus', defaultValue: '')
       required this.passengerFareCostAvibus})
       : super._();
 
@@ -605,97 +617,97 @@ class _$TripDTOImpl extends _TripDTO {
       _$$TripDTOImplFromJson(json);
 
   @override
-  @JsonKey(name: 'Id')
+  @JsonKey(name: 'Id', defaultValue: '')
   final String id;
   @override
-  @JsonKey(name: 'RouteId')
+  @JsonKey(name: 'RouteId', defaultValue: '')
   final String routeId;
   @override
-  @JsonKey(name: 'ScheduleTripId')
+  @JsonKey(name: 'ScheduleTripId', defaultValue: '')
   final String scheduleTripId;
   @override
-  @JsonKey(name: 'RouteName')
+  @JsonKey(name: 'RouteName', defaultValue: '')
   final String routeName;
   @override
-  @JsonKey(name: 'RouteNum')
+  @JsonKey(name: 'RouteNum', defaultValue: '')
   final String routeNum;
   @override
-  @JsonKey(name: 'Carrier')
+  @JsonKey(name: 'Carrier', defaultValue: '')
   final String carrier;
   @override
   @JsonKey(name: 'Bus')
   final BusDTO bus;
   @override
-  @JsonKey(name: 'Driver1')
+  @JsonKey(name: 'Driver1', defaultValue: '')
   final String driver1;
   @override
-  @JsonKey(name: 'Driver2')
+  @JsonKey(name: 'Driver2', defaultValue: '')
   final String driver2;
   @override
-  @JsonKey(name: 'Frequency')
+  @JsonKey(name: 'Frequency', defaultValue: '')
   final String frequency;
   @override
-  @JsonKey(name: 'Status')
+  @JsonKey(name: 'Status', defaultValue: '')
   final String status;
   @override
-  @JsonKey(name: 'StatusPrint')
+  @JsonKey(name: 'StatusPrint', defaultValue: '')
   final String statusPrint;
   @override
-  @JsonKey(name: 'StatusComment')
+  @JsonKey(name: 'StatusComment', defaultValue: '')
   final String statusComment;
   @override
-  @JsonKey(name: 'StatusDate')
+  @JsonKey(name: 'StatusDate', defaultValue: '')
   final String statusDate;
   @override
   @JsonKey(name: 'Departure')
   final DepartureDTO departure;
   @override
-  @JsonKey(name: 'DepartureTime')
+  @JsonKey(name: 'DepartureTime', defaultValue: '')
   final String departureTime;
   @override
-  @JsonKey(name: 'ArrivalToDepartureTime')
+  @JsonKey(name: 'ArrivalToDepartureTime', defaultValue: '')
   final String arrivalToDepartureTime;
   @override
   @JsonKey(name: 'Destination')
   final DestinationDTO destination;
   @override
-  @JsonKey(name: 'ArrivalTime')
+  @JsonKey(name: 'ArrivalTime', defaultValue: '')
   final String arrivalTime;
   @override
-  @JsonKey(name: 'Distance')
+  @JsonKey(name: 'Distance', defaultValue: '')
   final String distance;
   @override
-  @JsonKey(name: 'Duration')
+  @JsonKey(name: 'Duration', defaultValue: 0)
   final int duration;
   @override
-  @JsonKey(name: 'TransitSeats')
+  @JsonKey(name: 'TransitSeats', defaultValue: false)
   final bool transitSeats;
   @override
-  @JsonKey(name: 'FreeSeatsAmount')
+  @JsonKey(name: 'FreeSeatsAmount', defaultValue: 0)
   final int freeSeatsAmount;
   @override
-  @JsonKey(name: 'PassengerFareCost')
+  @JsonKey(name: 'PassengerFareCost', defaultValue: '')
   final String passengerFareCost;
   @override
-  @JsonKey(name: 'Platform')
+  @JsonKey(name: 'Platform', defaultValue: 1)
   final int platform;
   @override
-  @JsonKey(name: 'OnSale')
+  @JsonKey(name: 'OnSale', defaultValue: false)
   final bool onSale;
   @override
-  @JsonKey(name: 'Additional')
+  @JsonKey(name: 'Additional', defaultValue: false)
   final bool additional;
   @override
-  @JsonKey(name: 'Currency')
+  @JsonKey(name: 'Currency', defaultValue: '')
   final String currency;
   @override
-  @JsonKey(name: 'PrincipalTaxId')
+  @JsonKey(name: 'PrincipalTaxId', defaultValue: '')
   final String principalTaxId;
   @override
   @JsonKey(name: 'CarrierData')
   final CarrierDataDTO carrierData;
   @override
-  @JsonKey(name: 'PassengerFareCostAvibus')
+  @JsonKey(name: 'PassengerFareCostAvibus', defaultValue: '')
   final String passengerFareCostAvibus;
 
   @override
@@ -818,136 +830,151 @@ class _$TripDTOImpl extends _TripDTO {
 
 abstract class _TripDTO extends TripDTO {
   factory _TripDTO(
-      {@JsonKey(name: 'Id') required final String id,
-      @JsonKey(name: 'RouteId') required final String routeId,
-      @JsonKey(name: 'ScheduleTripId') required final String scheduleTripId,
-      @JsonKey(name: 'RouteName') required final String routeName,
-      @JsonKey(name: 'RouteNum') required final String routeNum,
-      @JsonKey(name: 'Carrier') required final String carrier,
+      {@JsonKey(name: 'Id', defaultValue: '') required final String id,
+      @JsonKey(name: 'RouteId', defaultValue: '') required final String routeId,
+      @JsonKey(name: 'ScheduleTripId', defaultValue: '')
+      required final String scheduleTripId,
+      @JsonKey(name: 'RouteName', defaultValue: '')
+      required final String routeName,
+      @JsonKey(name: 'RouteNum', defaultValue: '')
+      required final String routeNum,
+      @JsonKey(name: 'Carrier', defaultValue: '') required final String carrier,
       @JsonKey(name: 'Bus') required final BusDTO bus,
-      @JsonKey(name: 'Driver1') required final String driver1,
-      @JsonKey(name: 'Driver2') required final String driver2,
-      @JsonKey(name: 'Frequency') required final String frequency,
-      @JsonKey(name: 'Status') required final String status,
-      @JsonKey(name: 'StatusPrint') required final String statusPrint,
-      @JsonKey(name: 'StatusComment') required final String statusComment,
-      @JsonKey(name: 'StatusDate') required final String statusDate,
+      @JsonKey(name: 'Driver1', defaultValue: '') required final String driver1,
+      @JsonKey(name: 'Driver2', defaultValue: '') required final String driver2,
+      @JsonKey(name: 'Frequency', defaultValue: '')
+      required final String frequency,
+      @JsonKey(name: 'Status', defaultValue: '') required final String status,
+      @JsonKey(name: 'StatusPrint', defaultValue: '')
+      required final String statusPrint,
+      @JsonKey(name: 'StatusComment', defaultValue: '')
+      required final String statusComment,
+      @JsonKey(name: 'StatusDate', defaultValue: '')
+      required final String statusDate,
       @JsonKey(name: 'Departure') required final DepartureDTO departure,
-      @JsonKey(name: 'DepartureTime') required final String departureTime,
-      @JsonKey(name: 'ArrivalToDepartureTime')
+      @JsonKey(name: 'DepartureTime', defaultValue: '')
+      required final String departureTime,
+      @JsonKey(name: 'ArrivalToDepartureTime', defaultValue: '')
       required final String arrivalToDepartureTime,
       @JsonKey(name: 'Destination') required final DestinationDTO destination,
-      @JsonKey(name: 'ArrivalTime') required final String arrivalTime,
-      @JsonKey(name: 'Distance') required final String distance,
-      @JsonKey(name: 'Duration') required final int duration,
-      @JsonKey(name: 'TransitSeats') required final bool transitSeats,
-      @JsonKey(name: 'FreeSeatsAmount') required final int freeSeatsAmount,
-      @JsonKey(name: 'PassengerFareCost')
+      @JsonKey(name: 'ArrivalTime', defaultValue: '')
+      required final String arrivalTime,
+      @JsonKey(name: 'Distance', defaultValue: '')
+      required final String distance,
+      @JsonKey(name: 'Duration', defaultValue: 0) required final int duration,
+      @JsonKey(name: 'TransitSeats', defaultValue: false)
+      required final bool transitSeats,
+      @JsonKey(name: 'FreeSeatsAmount', defaultValue: 0)
+      required final int freeSeatsAmount,
+      @JsonKey(name: 'PassengerFareCost', defaultValue: '')
       required final String passengerFareCost,
-      @JsonKey(name: 'Platform') required final int platform,
-      @JsonKey(name: 'OnSale') required final bool onSale,
-      @JsonKey(name: 'Additional') required final bool additional,
-      @JsonKey(name: 'Currency') required final String currency,
-      @JsonKey(name: 'PrincipalTaxId') required final String principalTaxId,
+      @JsonKey(name: 'Platform', defaultValue: 1) required final int platform,
+      @JsonKey(name: 'OnSale', defaultValue: false) required final bool onSale,
+      @JsonKey(name: 'Additional', defaultValue: false)
+      required final bool additional,
+      @JsonKey(name: 'Currency', defaultValue: '')
+      required final String currency,
+      @JsonKey(name: 'PrincipalTaxId', defaultValue: '')
+      required final String principalTaxId,
       @JsonKey(name: 'CarrierData') required final CarrierDataDTO carrierData,
-      @JsonKey(name: 'PassengerFareCostAvibus')
+      @JsonKey(name: 'PassengerFareCostAvibus', defaultValue: '')
       required final String passengerFareCostAvibus}) = _$TripDTOImpl;
   _TripDTO._() : super._();
 
   factory _TripDTO.fromJson(Map<String, dynamic> json) = _$TripDTOImpl.fromJson;
 
   @override
-  @JsonKey(name: 'Id')
+  @JsonKey(name: 'Id', defaultValue: '')
   String get id;
   @override
-  @JsonKey(name: 'RouteId')
+  @JsonKey(name: 'RouteId', defaultValue: '')
   String get routeId;
   @override
-  @JsonKey(name: 'ScheduleTripId')
+  @JsonKey(name: 'ScheduleTripId', defaultValue: '')
   String get scheduleTripId;
   @override
-  @JsonKey(name: 'RouteName')
+  @JsonKey(name: 'RouteName', defaultValue: '')
   String get routeName;
   @override
-  @JsonKey(name: 'RouteNum')
+  @JsonKey(name: 'RouteNum', defaultValue: '')
   String get routeNum;
   @override
-  @JsonKey(name: 'Carrier')
+  @JsonKey(name: 'Carrier', defaultValue: '')
   String get carrier;
   @override
   @JsonKey(name: 'Bus')
   BusDTO get bus;
   @override
-  @JsonKey(name: 'Driver1')
+  @JsonKey(name: 'Driver1', defaultValue: '')
   String get driver1;
   @override
-  @JsonKey(name: 'Driver2')
+  @JsonKey(name: 'Driver2', defaultValue: '')
   String get driver2;
   @override
-  @JsonKey(name: 'Frequency')
+  @JsonKey(name: 'Frequency', defaultValue: '')
   String get frequency;
   @override
-  @JsonKey(name: 'Status')
+  @JsonKey(name: 'Status', defaultValue: '')
   String get status;
   @override
-  @JsonKey(name: 'StatusPrint')
+  @JsonKey(name: 'StatusPrint', defaultValue: '')
   String get statusPrint;
   @override
-  @JsonKey(name: 'StatusComment')
+  @JsonKey(name: 'StatusComment', defaultValue: '')
   String get statusComment;
   @override
-  @JsonKey(name: 'StatusDate')
+  @JsonKey(name: 'StatusDate', defaultValue: '')
   String get statusDate;
   @override
   @JsonKey(name: 'Departure')
   DepartureDTO get departure;
   @override
-  @JsonKey(name: 'DepartureTime')
+  @JsonKey(name: 'DepartureTime', defaultValue: '')
   String get departureTime;
   @override
-  @JsonKey(name: 'ArrivalToDepartureTime')
+  @JsonKey(name: 'ArrivalToDepartureTime', defaultValue: '')
   String get arrivalToDepartureTime;
   @override
   @JsonKey(name: 'Destination')
   DestinationDTO get destination;
   @override
-  @JsonKey(name: 'ArrivalTime')
+  @JsonKey(name: 'ArrivalTime', defaultValue: '')
   String get arrivalTime;
   @override
-  @JsonKey(name: 'Distance')
+  @JsonKey(name: 'Distance', defaultValue: '')
   String get distance;
   @override
-  @JsonKey(name: 'Duration')
+  @JsonKey(name: 'Duration', defaultValue: 0)
   int get duration;
   @override
-  @JsonKey(name: 'TransitSeats')
+  @JsonKey(name: 'TransitSeats', defaultValue: false)
   bool get transitSeats;
   @override
-  @JsonKey(name: 'FreeSeatsAmount')
+  @JsonKey(name: 'FreeSeatsAmount', defaultValue: 0)
   int get freeSeatsAmount;
   @override
-  @JsonKey(name: 'PassengerFareCost')
+  @JsonKey(name: 'PassengerFareCost', defaultValue: '')
   String get passengerFareCost;
   @override
-  @JsonKey(name: 'Platform')
+  @JsonKey(name: 'Platform', defaultValue: 1)
   int get platform;
   @override
-  @JsonKey(name: 'OnSale')
+  @JsonKey(name: 'OnSale', defaultValue: false)
   bool get onSale;
   @override
-  @JsonKey(name: 'Additional')
+  @JsonKey(name: 'Additional', defaultValue: false)
   bool get additional;
   @override
-  @JsonKey(name: 'Currency')
+  @JsonKey(name: 'Currency', defaultValue: '')
   String get currency;
   @override
-  @JsonKey(name: 'PrincipalTaxId')
+  @JsonKey(name: 'PrincipalTaxId', defaultValue: '')
   String get principalTaxId;
   @override
   @JsonKey(name: 'CarrierData')
   CarrierDataDTO get carrierData;
   @override
-  @JsonKey(name: 'PassengerFareCostAvibus')
+  @JsonKey(name: 'PassengerFareCostAvibus', defaultValue: '')
   String get passengerFareCostAvibus;
   @override
   @JsonKey(ignore: true)

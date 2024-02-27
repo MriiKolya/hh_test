@@ -11,6 +11,7 @@ class CarrierPersonalDataDTO with _$CarrierPersonalDataDTO {
     @JsonKey(name: 'Name', defaultValue: '') required String name,
     @JsonKey(name: 'Caption', defaultValue: '') required String caption,
     @JsonKey(name: 'Mandatory', defaultValue: false) required bool mandatory,
+    @JsonKey(name: 'Value', defaultValue: '') required String value,
     @JsonKey(name: 'PersonIdentifier', defaultValue: false)
     required bool personIdentifier,
     @JsonKey(name: 'Type', defaultValue: '') required String type,

@@ -6,8 +6,10 @@ class CarrierPersonalDataEntity extends Equatable {
   final bool mandatory;
   final bool personIdentifier;
   final String type;
+  final String value;
 
   const CarrierPersonalDataEntity({
+    required this.value,
     required this.name,
     required this.caption,
     required this.mandatory,
@@ -21,6 +23,7 @@ class CarrierPersonalDataEntity extends Equatable {
       name,
       caption,
       mandatory,
+      value,
       personIdentifier,
       type,
     ];
